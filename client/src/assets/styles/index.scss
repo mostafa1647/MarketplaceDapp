@@ -11,3 +11,162 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 	monospace;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+}
+
+$primaryColor: #1C0C5B;
+$secondaryColor: #3D2C8D;
+$thirdColor: #916BBF;
+$forthColor: #C996CC;
+
+@mixin flex($dir: row, $jus: center, $al: center) {
+	display: flex;
+	justify-content: $jus;
+	align-items: $al;
+}
+
+header {
+	text-align: center;
+	padding: 20px 0;
+	background-color: $primaryColor;
+	> div {
+		@include flex(row, space-between, center);
+	}
+	h2 {
+		color: #fff;
+		font-weight: 700;
+		font-size: 24px;
+		margin: 0;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+h4 {
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 0 5px;
+}
+p {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0 0 20px;
+}
+
+form {
+	input {
+		border: 2px solid $primaryColor;
+		height: 35px;
+		border-radius: 5px;
+		margin: 0 5px;
+		padding: 0 10px;
+		transition: 0.5s ease all;
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			border: 2px solid $thirdColor;
+			outline: none;
+			background-color: rgba($forthColor, 0.2);
+		}
+	}
+
+	button {
+		border: 2px solid $primaryColor;
+		border-radius: 5px;
+		background-color: $secondaryColor;
+		padding: 0 15px;
+		height: 35px;
+		color: #ffffff;
+		transition: 0.5s ease all;
+		&:hover {
+			cursor: pointer;
+			background-color: $primaryColor;
+		}
+	}
+}
+
+//ul {
+//	list-style-type: none;
+//	margin: 15px auto 0;
+//	max-width: 800px;
+//	padding: 0;
+//	li {
+//		margin: 5px;
+//		@include flex(row, space-around, center);
+//		text-align: center;
+//		strong {
+//			text-align: left;
+//			flex: 1 1 50%;
+//		}
+//		br {
+//			display: none;
+//		}
+//	}
+//}
+
+.table-wrapper {
+	max-width: 800px;
+	margin: 20px 0 0 0;
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		thead {
+			background-color: $secondaryColor;
+			color: #fff;
+			tr {
+				th {
+					text-align: left;
+					padding: 5px;
+					border: 2px solid $primaryColor;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					padding: 5px;
+					border: 2px solid $primaryColor;
+				}
+				&:nth-child(odd) {
+					//background-color: $thirdColor;
+				}
+				&:nth-child(even) {
+					//background-color: $forthColor;
+				}
+			}
+		}
+	}
+}
+
+section {
+	&.products-count {
+		p {
+			font-weight: 500;
+			font-size: 18px;
+			color: #fff;
+			margin: 0;
+			span {
+				&.products-count {
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+
+	&.view-product {
+		padding: 25px 0 0;
+		.invalid-product {
+			margin: 20px;
+			color: red;
+		}
+	}
+}

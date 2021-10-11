@@ -9,4 +9,111 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1C0C5B;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+form input {
+  border: 2px solid #1C0C5B;
+  height: 35px;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 0 10px;
+  transition: 0.5s ease all;
+}
+form input:hover, form input:focus, form input:focus-visible {
+  border: 2px solid #916BBF;
+  outline: none;
+  background-color: rgba(201, 150, 204, 0.2);
+}
+form button {
+  border: 2px solid #1C0C5B;
+  border-radius: 5px;
+  background-color: #3D2C8D;
+  padding: 0 15px;
+  height: 35px;
+  color: #ffffff;
+  transition: 0.5s ease all;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: #1C0C5B;
+}
+
+.table-wrapper {
+  max-width: 800px;
+  margin: 20px 0 0 0;
+}
+.table-wrapper table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-wrapper table thead {
+  background-color: #3D2C8D;
+  color: #fff;
+}
+.table-wrapper table thead tr th {
+  text-align: left;
+  padding: 5px;
+  border: 2px solid #1C0C5B;
+}
+.table-wrapper table tbody tr td {
+  padding: 5px;
+  border: 2px solid #1C0C5B;
+}
+section.products-count p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+}
+section.products-count p span.products-count {
+  padding: 0 5px;
+}
+section.view-product {
+  padding: 25px 0 0;
+}
+section.view-product .invalid-product {
+  margin: 20px;
+  color: red;
+}
+
 /*# sourceMappingURL=index.css.map */
