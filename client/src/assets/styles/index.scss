@@ -35,9 +35,11 @@ header {
 	text-align: center;
 	padding: 20px 0;
 	background-color: $primaryColor;
+
 	> div {
 		@include flex(row, space-between, center);
 	}
+
 	h2 {
 		color: #fff;
 		font-weight: 700;
@@ -56,6 +58,7 @@ h4 {
 	font-weight: 700;
 	margin: 0 0 5px;
 }
+
 p {
 	font-size: 16px;
 	font-weight: 500;
@@ -70,6 +73,7 @@ form {
 		margin: 0 5px;
 		padding: 0 10px;
 		transition: 0.5s ease all;
+
 		&:hover,
 		&:focus,
 		&:focus-visible {
@@ -87,6 +91,7 @@ form {
 		height: 35px;
 		color: #ffffff;
 		transition: 0.5s ease all;
+
 		&:hover {
 			cursor: pointer;
 			background-color: $primaryColor;
@@ -116,12 +121,15 @@ form {
 .table-wrapper {
 	max-width: 800px;
 	margin: 20px 0 0 0;
+
 	table {
 		border-collapse: collapse;
 		width: 100%;
+
 		thead {
 			background-color: $secondaryColor;
 			color: #fff;
+
 			tr {
 				th {
 					text-align: left;
@@ -130,15 +138,18 @@ form {
 				}
 			}
 		}
+
 		tbody {
 			tr {
 				td {
 					padding: 5px;
 					border: 2px solid $primaryColor;
 				}
+
 				&:nth-child(odd) {
 					//background-color: $thirdColor;
 				}
+
 				&:nth-child(even) {
 					//background-color: $forthColor;
 				}
@@ -154,6 +165,7 @@ section {
 			font-size: 18px;
 			color: #fff;
 			margin: 0;
+
 			span {
 				&.products-count {
 					padding: 0 5px;
@@ -164,6 +176,7 @@ section {
 
 	&.view-product {
 		padding: 25px 0 0;
+
 		.invalid-product {
 			margin: 20px;
 			color: red;
